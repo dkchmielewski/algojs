@@ -1,17 +1,19 @@
-function getMin(numbers) {
-    if(!numbers.length) {
+function getMin(numbers) { // [3, 1, 2]
+    if(!numbers.length) { // 1 execution
         throw new Error('Should not be an empty array!');
     }
-    let curMin = numbers[0];
+    let curMin = numbers[0]; // 1 execution
 
-    for(let i = 1; i < numbers.length; i++) {
-        if(numbers[i] < curMin) {
-            curMin = numbers[i];
+    for(let i = 1; i < numbers.length; i++) { // 1 execution
+        if(numbers[i] < curMin) { // 2 executions
+            curMin = numbers[i]; // 1 execution
         }
     }
 
-    return curMin;
+    return curMin; // 1 execution
 }
+
+// T = n => Linear Time Complexity => 0(n)
 
 function getMin2(numbers) {
     if(!numbers.length) {
@@ -34,6 +36,8 @@ function getMin2(numbers) {
 
     return numbers[0];
 }
+
+// Quadratic Time Complexity => n * n => 0(n^2)
 
 const testNums = [3,1,2];
 
